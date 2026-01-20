@@ -1,0 +1,9 @@
+module quad_2x1_74157_mux(
+    input a1,a2,b1,b2,c1,c2,d1,d2,en,s1,
+    output a0,b0,c0,d0
+    );
+    assign a0=en&(a1&(~s1)|a2&s1);
+    assign b0=en&(b1&(~s1)|b2&s1);
+    assign c0=en&(c1&(~s1)|c2&s1);
+    assign d0=en&(d1&(~s1)|d2&s1);
+    endmodule
